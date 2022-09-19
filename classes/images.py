@@ -12,6 +12,7 @@ wine_food_logo = ("""
 ██║███╗██║██║██║╚██╗██║██╔══╝      ██╔═██╔═╝    ██╔══╝  ██║   ██║██║   ██║██║  ██║
 ╚███╔███╔╝██║██║ ╚████║███████╗    ██████║      ██║     ╚██████╔╝╚██████╔╝██████╔╝
  ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚══════╝    ╚═════╝      ╚═╝      ╚═════╝  ╚═════╝ ╚═════╝ 
+                    WELCOME TO THE WINE AND FOOD PAIRING APP!
 """)
 
 wine_and_glass = ("""
@@ -31,7 +32,9 @@ wine_and_glass = ("""
              ,-||-.    |`-...|  |
             (  ''  )   |        |
              `----'     `-....-'
+                THANK YOU!
 """)
 
-print(wine_food_logo)
-print(wine_and_glass)
+class Image:
+  def __init__(self, cheese):
+    self.cheese = cowsay.cheese('Cheese goes well with any wine!')

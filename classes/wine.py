@@ -19,5 +19,7 @@ class Wine:
         return wine in cls.__available__wines
 
 class Food:
-    def __init__(self, name):
-        
+
+    def __init__(self, name, recipe):
+        self.name = name
+        self.recipe = recipe

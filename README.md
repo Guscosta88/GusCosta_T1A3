@@ -3,6 +3,8 @@
 
 ### Pairing Wine & Food:
 
+The logo appears on the screen, the user is prompted to press enter.
+
 1.The user types a type of wine:
 
 What type of red wine do you have in mind (Please enter full item name)?
@@ -23,6 +25,8 @@ What type of red wine do you have in mind (Please enter full item name)?
 The user can use the arrow and enter to choose the food:
 
 Please pick the select the food with the arrow and press enter:
+
+if the chosen food is beef, it shows the cow and so on, the user is prompted to press enter.
 
 1. Cabernet Sauvignon:
     1.A - roast beef
@@ -80,7 +84,7 @@ Please pick the select the food with the arrow and press enter:
     500g of beef
     100g of butter
     Salt and Pepper to taste
-    Put the beef on a tray, scrub butter salt and pepper all over, put it in the oven at 180° for 1hour.
+    Put the beef on a tray, rub butter salt and pepper all over, put it in the oven at 180° for 1hour.
 
 1.B - Gouda Cheese
 
@@ -112,42 +116,101 @@ Please pick the select the food with the arrow and press enter:
 
 4. Merlot:
     4.A - Pork
+    1 Pork Leg
+    Salt Pepper
+    Aluminium Foil
+    Oil
+    Get a Tray, add the pork leg, rub salt and pepper, add oil for the crackling, roll aluminium foil around the tray, bake at 180° for 2 hours.
+
     4.B - Camembert Cheese
     4.C - Figs
 
 5. Sangiovese:
     5.A - Spaghetti and meatballs
+    500g minced meat
+    1can tomato sauce
+    500g Spaghetti
+    Parmesan cheese
+    oil
+    1 onion
+    1 clove of Garlic
+    salt pepper
+    Cook spaghetti pasta in salty boiling water, fry oil with onion and garlic, add seasoned minced meat, when meat is done add tomato sauce, cook for 20 minutes, add water if needed, mix it with the pasta, add some parmesan, enjoy.
+
     5.B - Mozzarella Cheese
     5.C - Strawberry
     
 6. Chianti:
     6.A - Pizza
+    1 Pepperoni sausage
+    mozzarella cheese
+    tomato sauce
+    pizza base
+    oregano
+    preheat oven to 180, get a tray, put the pizza base, spread tomato sauce, add cheese, add sliced pepperoni, add oregano, bake for 10 to 20 minutes.
+
     6.B - Parmesan Cheese
     6.C - Apples
 
 7. Bordeaux:
     7.A - Lamb
+    1 leg of lamb
+    rosemary
+    thyme
+    olive oil
+    salt and pepper
+    7spices
+    Preheat oven to 180, put the leg of lamb on a tray, add the 7 spices, salt and pepper, olive oil and rub, bake for 2 hours.
+
     7.B - Brie Cheese
     7.C - Pears
 
 8. Tempranillo:
     8.A - Lasagna
+    500g minced meat
+    1can tomato sauce
+    500g Lasagna sheets
+    Mozzarella cheese
+    oil
+    1 onion
+    1 clove of Garlic
+    salt pepper
+    Fry oil with onion and garlic, add seasoned minced meat, when meat is done add tomato sauce, cook for 20 minutes, add water if needed, get a tray, add a layer of sauce, cheese and lasagna sheets, repeat untill you reach the top of the tray, bake for 40min at 180°.
+
     8.B - Manchego Cheese
     8.C - Cherries
 
 9. Carmenere:
     9.A - BBQ
+    Beef
+    sausages
+    Charcoal
+    Salt and pepper
+    light up the charcoal, season the beef with salt and pepper, grill the meat and sausages.
+
     9.B - Cheddar Cheese
     9.C - Plums
     
 10. Rose:
     10.A - Seafood
+    500g of mixed seafood
+    1 lemon or lime
+    100g butter
+    salt and pepper
+    2 cloves of garlic
+    Add butter and garlic to a frying pan, season seafood with salt and pepper, fry for 6 minutes.
+
     10.B - Feta Cheese
     10.C - Watermelon
 
 
 
-
+The user is prompted to press enter.
 4.The user is advised to not drink and drive.
+
+Enjoy your {food} with your {wine} and go to sleep or call a Taxi after, do not drive.
+The user is prompted to press enter.
+
+wine bottle is shown with a Thank you message.
 
 

@@ -28,7 +28,7 @@ class Wine:
             if enter == "":
                 enter = print(logo)
             elif enter != "":
-                print(input("PRESS ENTER TO START! "))
+                print(input("                             PRESS ENTER TO START! "))
                 break
 
 

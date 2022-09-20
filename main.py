@@ -1,6 +1,7 @@
 from classes.wine import Wine, Food
 from classes.bottle import bottle
 from classes.logo import logo
+from simple_term_menu import TerminalMenu
 import cowsay
 
 # cowsay.cheese('Cheese goes well with any wine!')
@@ -21,7 +22,48 @@ import cowsay
 # else:
 #     print(bottle)
 
+pairing = [
+    {'type':'Cabernet Sauvignon', 'protein':'Roast beef', 'cheese':'Gouda cheese', 'fruit':'Plums'},
+    {'type':'Pinot Noir', 'protein':'Salmon', 'cheese':'Gruyere cheese', 'fruit':'Apples'},
+    {'type':'Shiraz', 'protein':'Duck', 'cheese':'Pecorino cheese', 'fruit':'Apricot'},
+    {'type':'Merlot', 'protein':'Pork', 'cheese':'Camembert cheese', 'fruit':'Figs'},
+    {'type':'Sangiovese', 'protein':'Spaghetti and meatballs', 'cheese':'Mozzarella cheese', 'fruit':'Strawberry'},
+    {'type':'Chianti', 'protein':'Pizza', 'cheese':'Parmesan cheese', 'fruit':'Apples'},
+    {'type':'Bordeaux', 'protein':'Lamb', 'cheese':'Brie cheese', 'fruit':'Pears'},
+    {'type':'Tempranillo', 'protein':'Lasagna', 'cheese':'Manchego cheese', 'fruit':'Cherries'},
+    {'type':'Carmenere', 'protein':'BBQ', 'cheese':'Cheddar cheese', 'fruit':'Plums'},
+    {'type':'Rose', 'protein':'Seafood', 'cheese':'Feta cheese', 'fruit':'Watermelon'}
+]
+
+recipe = [
+    {'protein':'ROAST BEEF: \n 500g of beef \n 100g of butter \n Salt and Pepper to taste \n \n METHOD: \n Put the beef on a tray, rub butter salt and pepper all over, \n put it in the oven at 180° for 1hour.', 'cheese':'Gouda cheese', 'fruit':'Plums'},
+    {'protein':'Salmon', 'cheese':'Gruyere cheese', 'fruit':'Apples'},
+    {'protein':'Duck', 'cheese':'Pecorino cheese', 'fruit':'Apricot'},
+    {'protein':'Pork', 'cheese':'Camembert cheese', 'fruit':'Figs'},
+    {'protein':'Spaghetti and meatballs', 'cheese':'Mozzarella cheese', 'fruit':'Strawberry'},
+    {'protein':'Pizza', 'cheese':'Parmesan cheese', 'fruit':'Apples'},
+    {'protein':'Lamb', 'cheese':'Brie cheese', 'fruit':'Pears'},
+    {'protein':'Lasagna', 'cheese':'Manchego cheese', 'fruit':'Cherries'},
+    {'protein':'BBQ', 'cheese':'Cheddar cheese', 'fruit':'Plums'},
+    {'protein':'Seafood', 'cheese':'Feta cheese', 'fruit':'Watermelon'}
+]
+
+
+
+
 Wine.welcome()
+
+def not_valid_wine():
+    options = ["I want to try another wine", "I want to exit the app"]
+    terminal_menu = TerminalMenu(options)
+    menu_entry_index = terminal_menu.show()
+    if options[menu_entry_index] == "I want to try another wine":
+        print(wine_questions())
+    else:
+        print(bottle)
+    # print(f"You have selected {options[menu_entry_index]}!")
+
+
 
 
 def wine_questions():
@@ -30,10 +72,26 @@ def wine_questions():
     wine_validation = Wine.is_valid_wine(wine_input)
     if wine_validation:
         print(f"{wine_input} goes well with the foods bellow, choose one for Recipe!")
+        for pair in pairing:
+            if wine_input == pair['type']:
+                    food_options = [pair['protein'], pair['cheese'], pair['fruit']]
+                    terminal_menu = TerminalMenu(food_options)
+                    menu_entry_index = terminal_menu.show()
+                    for item in recipe:
+                        if options[menu_entry_index] == pair['protein']:
+                            print(item['protein'])
+                        elif options[menu_entry_index] == pair['cheese']:
+                            print(item['cheese'])
+                        else:
+                            print(item['fruit'])
     else:
-        print(input("Not a valid wine, Do you want to try another wine?(Y/N) "))
+        print(f"{wine_input} it is not a valid wine!")
+        print(not_valid_wine())
 
 wine_questions()
+
+
+
 
 
 

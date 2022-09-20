@@ -1,3 +1,7 @@
+from classes.bottle import bottle
+from classes.logo import logo
+import cowsay
+
 class Wine:
     __available__wines = [
         "Cabernet Sauvignon",
@@ -17,6 +21,18 @@ class Wine:
     @classmethod
     def is_valid_wine(cls, wine):
         return wine in cls.__available__wines
+
+    def welcome():
+        enter = ""
+        while True:
+            if enter == "":
+                enter = print(logo)
+            elif enter != "":
+                print(input("PRESS ENTER TO START! "))
+                break
+
+
+
 
 class Food:
 

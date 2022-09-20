@@ -36,16 +36,16 @@ pairing = [
 ]
 
 recipe = [
-    {'protein':'ROAST BEEF: \n 500g of beef \n 100g of butter \n Salt and Pepper to taste \n \n METHOD: \n Put the beef on a tray, rub butter salt and pepper all over, \n put it in the oven at 180° for 1hour.', 'cheese':'Gouda cheese', 'fruit':'Plums'},
-    {'protein':'Salmon', 'cheese':'Gruyere cheese', 'fruit':'Apples'},
-    {'protein':'Duck', 'cheese':'Pecorino cheese', 'fruit':'Apricot'},
-    {'protein':'Pork', 'cheese':'Camembert cheese', 'fruit':'Figs'},
-    {'protein':'Spaghetti and meatballs', 'cheese':'Mozzarella cheese', 'fruit':'Strawberry'},
-    {'protein':'Pizza', 'cheese':'Parmesan cheese', 'fruit':'Apples'},
-    {'protein':'Lamb', 'cheese':'Brie cheese', 'fruit':'Pears'},
-    {'protein':'Lasagna', 'cheese':'Manchego cheese', 'fruit':'Cherries'},
-    {'protein':'BBQ', 'cheese':'Cheddar cheese', 'fruit':'Plums'},
-    {'protein':'Seafood', 'cheese':'Feta cheese', 'fruit':'Watermelon'}
+    {'name':'Roast beef','protein':'ROAST BEEF: \n 500g of beef \n 100g of butter \n Salt and Pepper to taste \n \n METHOD: \n Put the beef on a tray, rub butter salt and pepper all over, \n put it in the oven at 180° for 1hour.', 'cheese':'Gouda cheese', 'fruit':'Plums'},
+    {'name':'Salmon','protein':'Salmon', 'cheese':'Gruyere cheese', 'fruit':'Apples'},
+    {'name':'Duck','protein':'Duck', 'cheese':'Pecorino cheese', 'fruit':'Apricot'},
+    {'name':'Pork','protein':'Pork', 'cheese':'Camembert cheese', 'fruit':'Figs'},
+    {'name':'Spaghetti and meatballs','protein':'Spaghetti and meatballs', 'cheese':'Mozzarella cheese', 'fruit':'Strawberry'},
+    {'name':'Pizza','protein':'Pizza', 'cheese':'Parmesan cheese', 'fruit':'Apples'},
+    {'name':'Lamb','protein':'Lamb', 'cheese':'Brie cheese', 'fruit':'Pears'},
+    {'name':'Lasagna','protein':'Lasagna', 'cheese':'Manchego cheese', 'fruit':'Cherries'},
+    {'name':'BBQ','protein':'BBQ', 'cheese':'Cheddar cheese', 'fruit':'Plums'},
+    {'name':'Seafood','protein':'Seafood', 'cheese':'Feta cheese', 'fruit':'Watermelon'}
 ]
 
 
@@ -78,12 +78,17 @@ def wine_questions():
                     terminal_menu = TerminalMenu(food_options)
                     menu_entry_index = terminal_menu.show()
                     for item in recipe:
-                        if options[menu_entry_index] == pair['protein']:
-                            print(item['protein'])
-                        elif options[menu_entry_index] == pair['cheese']:
-                            print(item['cheese'])
+                        if food_options[menu_entry_index] == pair['protein']:
+                            if pair['protein'] == item['name']:
+                                print(item['protein'])
+                                not_valid_wine()
+                        elif food_options[menu_entry_index] == pair['cheese']:
+                            if pair['cheese'] == item['cheese']:
+                                print(item['cheese'])
+                                not_valid_wine()
                         else:
                             print(item['fruit'])
+                            not_valid_wine()
     else:
         print(f"{wine_input} it is not a valid wine!")
         print(not_valid_wine())

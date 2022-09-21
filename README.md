@@ -49,7 +49,7 @@ if the chosen food is beef, it shows the cow and so on, the user is prompted to 
     4.C - Figs
 
 5. Sangiovese:
-    5.A - Spaghetti and meatballs
+    5.A - Spaghetti Bolognese
     5.B - Mozzarella Cheese
     5.C - Strawberry
     
@@ -126,7 +126,7 @@ if the chosen food is beef, it shows the cow and so on, the user is prompted to 
     4.C - Figs
 
 5. Sangiovese:
-    5.A - Spaghetti and meatballs
+    5.A - Spaghetti Bolognese
     500g minced meat
     1can tomato sauce
     500g Spaghetti

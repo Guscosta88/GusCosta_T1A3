@@ -34,8 +34,8 @@ class Wine:
 
 
 
-class Food:
+# class Food:
 
-    def __init__(self, name, recipe):
-        self.name = name
-        self.recipe = recipe
+#     def __init__(self, name, recipe):
+#         self.name = name
+#         self.recipe = recipe

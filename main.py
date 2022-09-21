@@ -1,6 +1,7 @@
+from classes.greetings import Greetings
 from classes.wine import Wine
-from classes.bottle import bottle
-from classes.logo import logo
+from classes.pair import Pair
+from classes.recipe import Recipe
 from simple_term_menu import TerminalMenu
 import clearing
 import cowsay

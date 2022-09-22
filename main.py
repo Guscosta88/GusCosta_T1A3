@@ -78,17 +78,15 @@ recipe_list = [
 Greetings.welcome()
 clearing.clear()
 
+input_message = input("What type of red wine do you have in mind (Please enter full item name)? ")
+user_wine = Wine(input_message)
+is_wine_valid = user_wine.is_valid_wine()
 
-# def reset_state():
-#     input_message = None
-#     is_wine_valid = None
-
-
+def reset_state():
+    input_message = None
+    is_wine_valid = None
 
 def wine_validation():
-    input_message = input("What type of red wine do you have in mind (Please enter full item name)? ")
-    user_wine = Wine(input_message)
-    is_wine_valid = user_wine.is_valid_wine()
     if is_wine_valid:
         clearing.clear()
         print(f"{input_message} goes well with the foods bellow, choose one for Recipe! (Use Arrow Keys ↑ ↓)")
@@ -103,7 +101,7 @@ def app_options():
     menu_entry_index = terminal_menu.show()
     if options[menu_entry_index] == options[0]:
         clearing.clear()
-        wine_validation()
+        reset_state()
     else:
         Greetings.end()
 

@@ -2,8 +2,8 @@ from constants.logo import logo
 
 class Wine:
     __available__wines = [
-        "Cabernet Sauvignon",
-        "Pinot Noir",
+        "Cabernet sauvignon",
+        "Pinot noir",
         "Shiraz",
         "Merlot",
         "Sangiovese",

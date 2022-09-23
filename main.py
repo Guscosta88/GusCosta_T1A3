@@ -239,6 +239,15 @@ def init():
     is_wine_valid = user_wine.is_valid_wine()
     wine_validation(is_wine_valid, input_message)
 
+
+def build_menu(options, return_string = True):
+    menu = TerminalMenu(options)
+    menu_entry_index = menu.show()
+    if return_string:
+        return options[menu_entry_index]
+    else:
+        return menu_entry_index
+
 def reset_state():
     input_message = None
     is_wine_valid = None
@@ -254,23 +263,21 @@ def wine_validation(is_wine_valid, input_message):
 
 def app_options():
     options = ["I want to try another wine (Use Arrow Keys ↑ ↓)", "I want to exit the app (Use Arrow Keys ↑ ↓)"]
-    terminal_menu = TerminalMenu(options)
-    menu_entry_index = terminal_menu.show()
-    if options[menu_entry_index] == options[0]:
-        clearing.clear()
-        input_message = input("What type of red wine do you have in mind (Please enter full item name)? ").capitalize()
-        input_message
-        wine_validation()
+    index = build_menu(options, False)
+    if index == 0:
+        init()
     else:
         Greetings.end()
 
-        
-
-def pair_list_iteration():
+def pair_list_iteration(input_message):
     for pair in wine_list:
         if input_message == pair.wine.name if pair and pair.wine else None:
             menu_options = [
+                pair.main_dish.name if pair and pair.main_dish else None,
+                pair.cheese.name if pair and pair.cheese else None,
+                pair.fruit.name if pair and pair.fruit else None
             ]
+            menu_selected = build_menu(menu_options)
             exit()
             food_options = [pair_list[i].main_dish, pair_list[i].cheese, pair_list[i].fruit]
             terminal_menu = TerminalMenu(food_options)

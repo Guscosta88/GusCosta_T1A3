@@ -14,7 +14,6 @@ Recipe(
 'Roast beef',
 '''
 ROAST BEEF:
-
 500g of beef 
 100g of butter
 Salt and Pepper to taste
@@ -30,7 +29,6 @@ Recipe(
 'Gouda cheese',
 '''
 CHEESE BOARD: 
-
 Gouda cheese 
 Prosciutto 
 Walnuts
@@ -42,7 +40,6 @@ Recipe(
 'Plums',
 '''
 DESSERT:
-
 Plums
 Honey
 Cream
@@ -52,181 +49,418 @@ Cream
 )
 )
 
-# pinot_noir = Pair(
-#                     'Pinot noir', 
-#                     'Salmon', 
-#                     'Gruyere cheese', 
-#                     'Apples', 
-#                     '''\n SALMON: \n 2 Slices of Salmon \n 100g of Butter \n 
-#                     Salt and pepper to taste \n Italian herbs \n \n 
-#                     METHOD: \n Season the fish with salt, pepper and herbs, 
-#                     \n add butter to a frying pan, cook both sides of \n the 
-#                     fish untill preferred level of doneness.\n''', 
-#                     '\n CHEESE BOARD: \n Gruyere cheese \n Bacon \n Almonds \n', 
-#                     '\n DESSERT: \n Apples \n Brown Sugar \n Cinammon \n'
-#                     )
+pinot_noir = Pair(
+Wine('Pinot noir'),
+Recipe(
+'Salmon', 
+ '''
+ SALMON:
+ 2 Slices of Salmon
+ 100g of Butter 
+ Salt and pepper to taste
+ Italian herbs
+ 
+ METHOD:
+ Season the fish with salt, pepper and herbs, 
+ add butter to a frying pan, cook both sides of the
+ fish untill preferred level of doneness.
+ 
+ ''',
+ 'main'
+),
+Recipe(
+'Gruyere cheese', 
+ '''
+ CHEESE BOARD:
+ Gruyere cheese
+ Bacon
+ Almonds
+ 
+ ''',
+ 'cheese'
+ ),
+ Recipe(
+'Apples',
+'''
+DESSERT:
+Apples
+Brown Sugar
+Cinammon
 
-# shiraz = Pair(
-#                 'Shiraz', 
-#                 'Duck', 
-#                 'Pecorino cheese', 
-#                 'Apricot', 
-#                 '''\n DUCK: \n 200g Duck Breasts \n 2tb of Olive Oil \n 1 Clove of garlic 
-#                 \n Lemon Pepper, Salt, to taste \n \n METHOD: \n Preheat oven to 180°, season the breasts with salt, 
-#                 \n Pepper and garlic, add Olive Oil to a frying pan, \n cook both sides untill brown, 
-#                 finish cooking for another 20min in the oven.\n''', 
-#                 '\n CHEESE BOARD: \n Pecorino cheese \n Ricotta \n Ham \n', 
-#                 '\n DESSERT: \n Apricot \n Tahini \n Attar \n Pistachios \n'
-#                 )
+''',
+'fruit'
+)
+)
 
-# merlot = Pair(
-#                 'Merlot', 
-#                 'Pork', 
-#                 'Camembert cheese', 
-#                 'Figs', 
-#                 '''\n PORK: \n 1 Pork Leg \n Salt Pepper \n Aluminium Foil \n Oil \n \n 
-#                 METHOD: \n Get a Tray, add the pork leg, rub salt and pepper, 
-#                 \n add oil for the crackling, roll aluminium foil around \n 
-#                 the tray, bake at 180° for 2 hours.\n''', 
-#                 '\n CHEESE BOARD: \n Camembert cheese \n Cashew Nuts \n Olive Oil \n', 
-#                 '\n DESSERT: \n Figs \n Brown Sugar \n Lemon Juice \n Zest \n Cream or Icecream \n'
-#                 )
+shiraz = Pair(
+Wine('Shiraz'),
+Recipe(
+'Duck', 
+'''
+DUCK:
+200g Duck Breasts
+2tb of Olive Oil
+1 Clove of garlic
+Lemon Pepper, Salt, to taste
 
-# sangiovese = Pair(
-#                     'Sangiovese', 
-#                     'Spaghetti Bolognese', 
-#                     'Mozzarella cheese', 
-#                     'Strawberry', 
-#                     '''\n SPAGHETTI BOLOGNESE: \n 500g minced meat \n 1 can tomato sauce \n 500g Spaghetti 
-#                     \n Parmesan cheese \n oil \n 1 onion \n 1 clove of Garlic \n salt pepper \n \n 
-#                     METHOD: \n Cook spaghetti pasta in salty boiling water, \n fry oil with onion and garlic, 
-#                     add seasoned minced meat, \n when meat is done add tomato sauce, cook for 20 minutes, \n 
-#                     add water if needed, mix it with the pasta, add some parmesan, enjoy.\n''', 
-#                     '\n CHEESE BOARD: \n Mozzarella cheese \n Jam \n Brazil Nuts \n', 
-#                     '\n DESSERT: \n Strawberry \n Condensed Milk \n'
-#                     )
+METHOD:
+Preheat oven to 180°, season the breasts with salt, 
+Pepper and garlic, add Olive Oil to a frying pan,
+cook both sides untill brown, finish cooking for 
+another 20min in the oven.
 
-# chianti = Pair(
-#                 'Chianti', 
-#                 'Pizza', 
-#                 'Parmesan cheese', 
-#                 'Apples', 
-#                 '''\n PIZZA: \n 1 Sliced Pepperoni sausage \n mozzarella cheese \n tomato sauce \n pizza base 
-#                 \n oregano \n \n METHOD: \n preheat oven to 180, get a tray, put the pizza base, \n 
-#                 spread tomato sauce, add cheese, add sliced pepperoni, \n add oregano, bake for 10 to 20 minutes.\n''', 
-#                 '\n CHEESE BOARD: \n Parmesan cheese \n Pepperoni \n Brown Sugar \n', 
-#                 '\n DESSERT: \n Apples \n Brown Sugar \n Cinammon \n'
-#                 )
+''',
+'main'
+),
+Recipe(
+'Pecorino cheese', 
+'''
+CHEESE BOARD:
+Pecorino cheese
+Ricotta
+Ham
 
-# bordeaux = Pair(
-#                 'Bordeaux', 
-#                 'Lamb', 
-#                 'Brie cheese', 
-#                 'Pears', 
-#                 '''\n LAMB: \n 1 leg of lamb \n rosemary \n thyme \n olive oil \n salt and pepper \n 7spices \n \n 
-#                 METHOD: \n Preheat oven to 180, put the leg of lamb on a tray, add the 7 spices, \n salt and pepper, 
-#                 olive oil and rub, bake for 2 hours.\n''', 
-#                 '\n CHEESE BOARD: \n Brie cheese \n Truffles \n Peanuts \n', 
-#                 '\n DESSERT: \n Pears \n Maple Syrup \n Macadamia Nuts \n'
-#                 )
+''',
+'cheese'
+),
+Recipe(
+'Apricot',
+'''
+DESSERT:
+Apricot
+Tahini
+Attar
+Pistachios
 
-# tempranillo = Pair(
-#                     'Tempranillo', 
-#                     'Lasagna', 
-#                     'Manchego cheese', 
-#                     'Cherries', 
-#                     '''\n LASAGNA: \n 500g minced meat \n 1can tomato sauce \n 500g Lasagna sheets \n Mozzarella cheese \n 
-#                     oil \n 1 onion \n 1 clove of Garlic \n salt pepper \n \n METHOD: \n Fry oil with onion and garlic, 
-#                     add seasoned minced meat, when meat \n is done add tomato sauce, cook for 20 minutes, add water if \n 
-#                     needed, get a tray, add a layer of sauce, cheese and lasagna sheets, \n repeat untill you reach the 
-#                     top of the tray, bake for 40min at 180°.\n''', 
-#                     '\n CHEESE BOARD: \n Manchego cheese \n Jamon \n Toasted Sunflower Seeds \n', 
-#                     '\n DESSERT: \n Cherries \n Cream \n Honey \n'
-#                     )
+''',
+'fruit'
+)
+)
 
-# carmenere = Pair(
-#                 'Carmenere', 
-#                 'BBQ', 
-#                 'Cheddar cheese', 
-#                 'Plums', 
-#                 '''\n BBQ: \n Beef \n sausages \n Charcoal \n Salt and pepper \n \n METHOD: \n light up the charcoal, 
-#                 season the beef with salt and pepper, \n grill the meat and sausages.\n''', 
-#                 '\n CHEESE BOARD: \n Cheddar cheese \n Smoked Almonds \n Barbecue Sauce \n', 
-#                 '\n DESSERT: \n Plums \n Maple Syrup \n'
-#                 )
+merlot = Pair(
+Wine('Merlot'), 
+Recipe(
+'Pork', 
+'''
+PORK:
+1 Pork Leg
+Salt Pepper
+Aluminium Foil
+Oil
 
-# rose = Pair(
-#             'Rose', 
-#             'Seafood', 
-#             'Feta cheese', 
-#             'Watermelon', 
-#             '''\n SEAFOOD: \n 500g of mixed seafood \n 1 lemon or lime \n 100g butter \n salt and pepper \n 2 cloves of garlic \n \n 
-#             METHOD: \n Add butter and garlic to a frying pan, season seafood \n with salt and pepper, fry for 6 minutes.\n''', 
-#             '\n CHEESE BOARD: \n Feta cheese \n Anchovies \n Tzatziki Sauce \n', 
-#             '\n DESSERT: \n Watermelon \n does not need anything else \n'
-#             )
+METHOD:
+Get a Tray, add the pork leg, rub salt and pepper, 
+add oil for the crackling, roll aluminium foil around
+the tray, bake at 180° for 2 hours.
+
+''',
+'main'
+),
+Recipe(
+'Camembert cheese', 
+'''
+CHEESE BOARD:
+Camembert cheese
+Cashew Nuts
+Olive Oil
+
+''',
+'cheese'
+),
+Recipe(
+'Figs',
+'''
+DESSERT:
+Figs
+Brown Sugar
+Lemon Juice
+Zest
+Cream or Icecream
+
+''',
+'fruit'
+)
+)
+
+sangiovese = Pair(
+Wine('Sangiovese'), 
+Recipe(
+'Spaghetti Bolognese', 
+'''
+SPAGHETTI BOLOGNESE:
+500g minced meat
+1 can tomato sauce
+500g Spaghetti
+Parmesan cheese
+oil
+1 onion
+1 clove of Garlic
+salt pepper
+
+METHOD:
+Cook spaghetti pasta in salty boiling water,
+fry oil with onion and garlic, add seasoned minced meat,
+when meat is done add tomato sauce, cook for 20 minutes, 
+add water if needed, mix it with the pasta, add some parmesan, enjoy.
+
+''',
+'main'
+),
+Recipe(
+'Mozzarella cheese',
+'''
+CHEESE BOARD:
+Mozzarella cheese
+Jam
+Brazil Nuts
+
+''',
+'cheese'
+),
+Recipe(
+'Strawberry', 
+'''
+DESSERT:
+Strawberry
+Condensed Milk
+
+''',
+'fruit'
+)
+)
+
+
+chianti = Pair(
+Wine('Chianti'), 
+Recipe(
+'Pizza', 
+'''
+PIZZA:
+1 Sliced Pepperoni sausage
+mozzarella cheese
+tomato sauce
+pizza base 
+oregano
+
+METHOD:
+preheat oven to 180, get a tray, put the pizza base,
+spread tomato sauce, add cheese, add sliced pepperoni,
+add oregano, bake for 10 to 20 minutes.
+
+''',
+'main'
+),
+Recipe(
+'Parmesan cheese',
+'''
+CHEESE BOARD:
+Parmesan cheese
+Pepperoni
+Brown Sugar
+
+''',
+'cheese'
+),
+Recipe(
+'Apples',
+'''
+DESSERT:
+Apples
+Brown Sugar
+Cinammon
+
+''',
+'fruit'
+)
+)
+
+bordeaux = Pair(
+Wine('Bordeaux'), 
+Recipe(
+'Lamb',             
+'''
+LAMB:
+1 leg of lamb
+rosemary
+thyme
+olive oil
+salt and pepper
+7spices
+
+METHOD:
+Preheat oven to 180, put the leg of lamb on a tray, add the 7 spices,
+salt and pepper, olive oil and rub, bake for 2 hours.
+
+''',
+'main'
+),
+Recipe(
+'Brie cheese',
+'''
+CHEESE BOARD:
+Brie cheese
+Truffles
+Peanuts
+
+''',
+'cheese'
+),
+Recipe(
+'Pears',  
+'''
+DESSERT:
+Pears
+Maple Syrup
+Macadamia Nuts
+
+''',
+'fruit'
+)
+)
+
+tempranillo = Pair(
+Wine('Tempranillo'), 
+Recipe(
+'Lasagna', 
+''' 
+LASAGNA:
+500g minced meat
+1can tomato sauce
+500g Lasagna sheets
+Mozzarella cheese
+oil
+1 onion
+1 clove of Garlic
+salt pepper
+
+METHOD:
+Fry oil with onion and garlic, add seasoned minced meat, when meat
+is done add tomato sauce, cook for 20 minutes, add water if
+needed, get a tray, add a layer of sauce, cheese and lasagna sheets,
+repeat untill you reach the top of the tray, bake for 40min at 180°.
+
+''',
+'main'
+),
+Recipe(
+'Manchego cheese',
+'''
+CHEESE BOARD:
+Manchego cheese
+Jamon
+Toasted Sunflower Seeds
+
+''',
+'cheese'
+),
+Recipe(
+'Cherries',
+'''
+DESSERT:
+Cherries
+Cream
+Honey
+
+''',
+'fruit'
+)
+)
+
+carmenere = Pair(
+Wine('Carmenere'), 
+Recipe(
+'BBQ', 
+'''
+BBQ:
+Beef
+sausages
+Charcoal
+Salt and pepper
+
+METHOD:
+light up the charcoal, season the beef with salt and pepper,
+grill the meat and sausages.
+
+''',
+'main'
+),
+Recipe(
+'Cheddar cheese',
+'''
+CHEESE BOARD:
+Cheddar cheese
+Smoked Almonds
+Barbecue Sauce
+
+''',
+'cheese'
+),
+Recipe(
+'Plums',
+'''
+DESSERT:
+Plums
+Maple Syrup
+
+''',
+'fruit'
+)
+)
+
+rose = Pair(
+Wine('Rose'), 
+Recipe(
+'Seafood', 
+'''
+SEAFOOD:
+500g of mixed seafood
+1 lemon or lime
+100g butter
+salt and pepper
+2 cloves of garlic
+
+METHOD:
+Add butter and garlic to a frying pan, season seafood
+with salt and pepper, fry for 6 minutes.
+
+''',
+'main'
+),
+Recipe(
+'Feta cheese',
+'''
+CHEESE BOARD:
+Feta cheese
+Anchovies
+Tzatziki Sauce
+
+''',
+'cheese'
+),
+Recipe(
+'Watermelon',
+'''
+DESSERT:
+Watermelon
+does not need anything else
+
+''',
+'fruit'
+)
+)
 
 wine_list = [
     cabernet_sauvignon,
-    # pinot_noir,
-    # shiraz,
-    # merlot,
-    # sangiovese,
-    # chianti,
-    # bordeaux,
-    # tempranillo,
-    # carmenere,
-    # rose
+    pinot_noir,
+    shiraz,
+    merlot,
+    sangiovese,
+    chianti,
+    bordeaux,
+    tempranillo,
+    carmenere,
+    rose
 ]
-
-
-# cabernet_sauvignon_pair = Pair('Cabernet sauvignon', 'Roast beef', 'Gouda cheese', 'Plums')
-# pinot_noir_pair = Pair('Pinot noir', 'Salmon', 'Gruyere cheese', 'Apples')
-# shiraz_pair = Pair('Shiraz', 'Duck', 'Pecorino cheese', 'Apricot')
-# merlot_pair = Pair('Merlot', 'Pork', 'Camembert cheese', 'Figs')
-# sangiovese_pair = Pair('Sangiovese', 'Spaghetti Bolognese', 'Mozzarella cheese', 'Strawberry')
-# chianti_pair = Pair('Chianti', 'Pizza', 'Parmesan cheese', 'Apples')
-# bordeaux_pair = Pair('Bordeaux', 'Lamb', 'Brie cheese', 'Pears')
-# tempranillo_pair = Pair('Tempranillo', 'Lasagna', 'Manchego cheese', 'Cherries')
-# carmenere_pair = Pair('Carmenere', 'BBQ', 'Cheddar cheese', 'Plums')
-# rose_pair = Pair('Rose', 'Seafood', 'Feta cheese', 'Watermelon')
-
-# pair_list = [
-#     cabernet_sauvignon_pair,
-#     pinot_noir_pair,
-#     shiraz_pair,
-#     merlot_pair,
-#     sangiovese_pair,
-#     chianti_pair,
-#     bordeaux_pair,
-#     tempranillo_pair,
-#     carmenere_pair,
-#     rose_pair
-# ]
-
-# cabernet_sauvignon_recipe = Recipe('Cabernet sauvignon', '\n ROAST BEEF: \n 500g of beef \n 100g of butter \n Salt and Pepper to taste \n \n METHOD: \n Put the beef on a tray, rub butter salt and pepper all over, \n put it in the oven at 180° for 1hour.\n', '\n CHEESE BOARD: \n Gouda cheese \n Prosciutto \n Walnuts \n ', '\n DESSERT: \n Plums \n Honey \n Cream \n')
-# pinot_noir_recipe = Recipe('Pinot noir', '\n SALMON: \n 2 Slices of Salmon \n 100g of Butter \n Salt and pepper to taste \n Italian herbs \n \n METHOD: \n Season the fish with salt, pepper and herbs, \n add butter to a frying pan, cook both sides of \n the fish untill preferred level of doneness.\n', '\n CHEESE BOARD: \n Gruyere cheese \n Bacon \n Almonds \n', '\n DESSERT: \n Apples \n Brown Sugar \n Cinammon \n')
-# shiraz_recipe = Recipe('Shiraz', '\n DUCK: \n 200g Duck Breasts \n 2tb of Olive Oil \n 1 Clove of garlic \n Lemon Pepper, Salt, to taste \n \n METHOD: \n Preheat oven to 180°, season the breasts with salt, \n Pepper and garlic, add Olive Oil to a frying pan, \n cook both sides untill brown, finish cooking for another 20min in the oven.\n', '\n CHEESE BOARD: \n Pecorino cheese \n Ricotta \n Ham \n', '\n DESSERT: \n Apricot \n Tahini \n Attar \n Pistachios \n')
-# merlot_recipe = Recipe('Merlot', '\n PORK: \n 1 Pork Leg \n Salt Pepper \n Aluminium Foil \n Oil \n \n METHOD: \n Get a Tray, add the pork leg, rub salt and pepper, \nadd oil for the crackling, roll aluminium foil around \n the tray, bake at 180° for 2 hours.\n', '\n CHEESE BOARD: \n Camembert cheese \n Cashew Nuts \n Olive Oil \n', '\n DESSERT: \n Figs \n Brown Sugar \n Lemon Juice \n Zest \n Cream or Icecream \n')
-# sangiovese_recipe = Recipe('Sangiovese', '\n SPAGHETTI BOLOGNESE: \n 500g minced meat \n 1 can tomato sauce \n 500g Spaghetti \n Parmesan cheese \n oil \n 1 onion \n 1 clove of Garlic \n salt pepper \n \n METHOD: \n Cook spaghetti pasta in salty boiling water, \n fry oil with onion and garlic, add seasoned minced meat, \n when meat is done add tomato sauce, cook for 20 minutes, \n add water if needed, mix it with the pasta, add some parmesan, enjoy.\n', '\n CHEESE BOARD: \n Mozzarella cheese \n Jam \n Brazil Nuts \n', '\n DESSERT: \n Strawberry \n Condensed Milk \n')
-# chianti_recipe = Recipe('Chianti', '\n PIZZA: \n 1 Sliced Pepperoni sausage \n mozzarella cheese \n tomato sauce \n pizza base \n oregano \n \n METHOD: \n preheat oven to 180, get a tray, put the pizza base, \n spread tomato sauce, add cheese, add sliced pepperoni, \n add oregano, bake for 10 to 20 minutes.\n', '\n CHEESE BOARD: \n Parmesan cheese \n Pepperoni \n Brown Sugar \n', '\n DESSERT: \n Apples \n Brown Sugar \n Cinammon \n')
-# bordeaux_recipe = Recipe('Bordeaux', '\n LAMB: \n 1 leg of lamb \n rosemary \n thyme \n olive oil \n salt and pepper \n 7spices \n \n METHOD: \n Preheat oven to 180, put the leg of lamb on a tray, add the 7 spices, \n salt and pepper, olive oil and rub, bake for 2 hours.\n', '\n CHEESE BOARD: \n Brie cheese \n Truffles \n Peanuts \n', '\n DESSERT: \n Pears \n Maple Syrup \n Macadamia Nuts \n')
-# tempranillo_recipe = Recipe('Tempranillo', '\n LASAGNA: \n 500g minced meat \n 1can tomato sauce \n 500g Lasagna sheets \n Mozzarella cheese \n oil \n 1 onion \n 1 clove of Garlic \n salt pepper \n \n METHOD: \n Fry oil with onion and garlic, add seasoned minced meat, when meat \n is done add tomato sauce, cook for 20 minutes, add water if \n needed, get a tray, add a layer of sauce, cheese and lasagna sheets, \n repeat untill you reach the top of the tray, bake for 40min at 180°.\n', '\n CHEESE BOARD: \n Manchego cheese \n Jamon \n Toasted Sunflower Seeds \n', '\n DESSERT: \n Cherries \n Cream \n Honey \n')
-# carmenere_recipe = Recipe('Carmenere', '\n BBQ: \n Beef \n sausages \n Charcoal \n Salt and pepper \n \n METHOD: \n light up the charcoal, season the beef with salt and pepper, \n grill the meat and sausages.\n', '\n CHEESE BOARD: \n Cheddar cheese \n Smoked Almonds \n Barbecue Sauce \n', '\n DESSERT: \n Plums \n Maple Syrup \n')
-# rose_recipe = Recipe('Rose', '\n SEAFOOD: \n 500g of mixed seafood \n 1 lemon or lime \n 100g butter \n salt and pepper \n 2 cloves of garlic \n \n METHOD: \n Add butter and garlic to a frying pan, season seafood \n with salt and pepper, fry for 6 minutes.\n', '\n CHEESE BOARD: \n Feta cheese \n Anchovies \n Tzatziki Sauce \n', '\n DESSERT: \n Watermelon \n does not need anything else \n')
-
-# recipe_list = [
-#     cabernet_sauvignon_recipe,
-#     pinot_noir_recipe,
-#     shiraz_recipe,
-#     merlot_recipe,
-#     sangiovese_recipe,
-#     chianti_recipe,
-#     bordeaux_recipe,
-#     tempranillo_recipe,
-#     carmenere_recipe,
-#     rose_recipe
-# ]
 
 
 Greetings.welcome()
@@ -290,13 +524,16 @@ def pair_list_iteration(input_message):
             menu_selected = build_menu(menu_options)
 
             if pair.main_dish.name == menu_selected:
+                clearing.clear()
                 print(pair.main_dish.description)
                 cowsay_check = pair.main_dish.name
                 cowsay_items(cowsay_check)
             elif pair.cheese.name == menu_selected:
+                clearing.clear()
                 print(pair.cheese.description)
                 cowsay.cheese('Cheese goes well with any wine!')
             else:
+                clearing.clear()
                 print(pair.fruit.description)
 
             app_options()

@@ -269,6 +269,16 @@ def app_options():
     else:
         Greetings.end()
 
+def cowsay_items(cowsay_check):
+    if cowsay_check == 'Pork':
+        cowsay.pig('Merlot and Pork are best friends!')
+    elif cowsay_check == 'Roast beef':
+        cowsay.cow('You cant go wrong with Roast Beef and Cabernet!')
+    elif cowsay_check == 'Duck':
+        cowsay.turkey('Shiraz goes with any Poultry!')
+    else:
+        cowsay.trex('No wine is old enough to Pair with a T-Rex!')
+
 def pair_list_iteration(input_message):
     for pair in wine_list:
         if input_message == pair.wine.name if pair and pair.wine else None:
@@ -278,26 +288,19 @@ def pair_list_iteration(input_message):
                 pair.fruit.name if pair and pair.fruit else None
             ]
             menu_selected = build_menu(menu_options)
-            exit()
-            food_options = [pair_list[i].main_dish, pair_list[i].cheese, pair_list[i].fruit]
-            terminal_menu = TerminalMenu(food_options)
-            menu_entry_index = terminal_menu.show()
-            for item in range(len(recipe_list)):
-                if food_options[menu_entry_index] == pair_list[i].main_dish:
-                    clearing.clear()
-                    if pair_list[i].wine == recipe_list[item].wine:
-                        print(recipe_list[item].main_dish)
-                        app_options()
-                elif food_options[menu_entry_index] == pair_list[i].cheese:
-                    clearing.clear()
-                    if pair_list[i].wine == recipe_list[item].wine:
-                        print(recipe_list[item].cheese_board)
-                        app_options()
-                elif food_options[menu_entry_index] == pair_list[i].fruit:
-                    clearing.clear()
-                    if pair_list[i].wine == recipe_list[item].wine:
-                        print(recipe_list[item].dessert)
-                        app_options()
+
+            if pair.main_dish.name == menu_selected:
+                print(pair.main_dish.description)
+                cowsay_check = pair.main_dish.name
+                cowsay_items(cowsay_check)
+            elif pair.cheese.name == menu_selected:
+                print(pair.cheese.description)
+                cowsay.cheese('Cheese goes well with any wine!')
+            else:
+                print(pair.fruit.description)
+
+            app_options()
+
 
 init()
 

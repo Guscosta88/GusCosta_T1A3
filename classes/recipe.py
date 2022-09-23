@@ -1,6 +1,5 @@
 class Recipe:
-    def __init__(self, wine, main_dish, cheese_board, dessert):
-        self.wine = wine
-        self.main_dish = main_dish
-        self.cheese_board = cheese_board
-        self.dessert = dessert
+    def __init__(self, name, description, recipe_type):
+        self.name = name
+        self.description = description
+        self.recipe_type = recipe_type

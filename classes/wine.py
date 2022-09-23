@@ -1,5 +1,3 @@
-from constants.logo import logo
-
 class Wine:
     __available__wines = [
         "Cabernet sauvignon",
@@ -17,5 +15,5 @@ class Wine:
         self.name = name
 
 
-    def is_valid_wine(cls):
-        return cls.name in cls.__available__wines
+    def is_valid_wine(self):
+        return self.name in self.__available__wines

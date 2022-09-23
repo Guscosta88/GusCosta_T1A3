@@ -11,7 +11,7 @@ class Greetings:
             if enter == "":
                 enter = print(logo)
             elif enter != "":
-                print(input("                             PRESS ENTER TO START! "))
+                print(input("\t\t\tPRESS ENTER TO START! "))
                 break
     @classmethod
     def end(self):

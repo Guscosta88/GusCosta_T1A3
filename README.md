@@ -12,11 +12,11 @@ Click [here](https://youtu.be/qFXFjf9qJko) To open my Youtube video showing the 
 
 #### **What does the app do?**
 
-- It takes a user input with the name of a type of wine and it returns food options and recipes that pair with it.
+- It takes an user input with the name of a type of wine and it returns food options and recipes that pair with it.
 
 #### **What problem does it solve?**
 
-- It allows the user to aquire knowledge about the different types of wine and the food that goes with it.
+- It allows the user to aquire knowledge about the different types of wine and the foods that goes with it.
 
 #### **what is the main goal?**
 
@@ -131,14 +131,72 @@ Click [here](https://peps.python.org/pep-0008/) To open the link to PEP 8 – St
 ![recipe_cowsay](./images/recipe_cowsay.jpg)
 
 
-### **8. When the user chooses to try another wine the init function is run again.**
+### **8. When the user chooses to try another wine the init function runs again.**
 ### **9. When the user chooses to exit the app an ASCII file with a bottle of wine and glasses is shown on the Screen with a thank you and a do not drink and drive message.**
 
 ![End](./images/end.jpg)
 
-### R7
-## **Implementation Plan**
-R7 - GET BACK TO THIS
+### **10. The Python packages used in this application are:**
+
+- Simple_term_menu:
+    It creates an interactive menu in the terminal with the option to use arrow keys as selectors.
+    
+- Clearing
+    It clears the terminal from past entries and outputs.
+
+- Cowsay
+    it returns different drawings of characters or animals with a message.
+
+- Colorterminal
+    it adds collor to the terminal items.
+
+# **Flow Chart**
+
+![Flowchart](./images/T1A3_flowchart.svg)
+
+
+# **Implementation Plan**
+
+## **Day One:**
+
+- My first idea was to make a drawing app, but due to the GUI package constraints the educators decided that would be best to change, this is when I came up with the idea of building a wine and food pairing app where I could iterate 2 lists and match them for the outcome.
+- The first day I spent creating a Trello board and refining my idea trying to decide which way to go to implement it and which features to include:
+
+![Day One](./images/trello_board_day_one.jpg)
+
+## **Day Two:**
+
+- Day two I spent mostly organizing the lists of wine, and recipes trying to think what features to build and the best way to organize it to be easy to interact with it.
+
+![Day Two](./images/trello_board_day_two.jpg)
+
+## **Day Three:**
+
+- As I was implementing little bits of the code and testing what would work I started to have a clearer idea of the features. I was able to write a rough logic that was already working from start to finish, but not DRY and with a lot of room for improvement.
+
+![Day Three](./images/trello_board_day_three.jpg)
+
+## **Day Four:**
+
+- I started creating the classes to iterate with the lists and also to split my rough code into functions following the PEP-8 standards and OOP.
+
+![Day Four](./images/trello_board_day_four.jpg)
+
+## **Day Five:**
+
+- I started implementing some error handling and validations.
+
+![Day Five](./images/trello_board_day_five.jpg)
+
+## **Day Six:**
+
+- Created an ASCII logo and finish message.
+
+![Day Six](./images/trello_board_day_six.jpg)
+
+
+
+Click [here](https://trello.com/invite/b/r3h2nupf/f9aec563ed1bb1216b8cef26ded72817/agile-board) To open Trello board.
 
 ### R8
 ## **Help Documentation**
@@ -146,8 +204,3 @@ R8 - GET BACK TO THIS
 
 
 
-existing Python Packages:
-simple_term_menu
-clearing
-cowsay
-colorterminal

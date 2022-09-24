@@ -1,12 +1,20 @@
+# classes where imported from the classes folder:
 from classes.greetings import Greetings
 from classes.wine import Wine
 from classes.pair import Pair
 from classes.recipe import Recipe
+
+# packages py imported:
 from simple_term_menu import TerminalMenu
 import clearing
 import cowsay
 
-
+# Wine_list items:
+# Every item of the wine_list is contained within the Pair class, which includes the self, wine, main, cheese and fruit attributes.
+# The wine item inside of the Pair class is handled within the Wine class which includes self, name.
+# Every Recipe item inside of the Pair class is handled within the Recipe class which includes self, name, description and recipe_type.
+# Every class needed is imported within the main.py file.
+# Each variable name contains all of this data and makes it easy to be accessed.
 
 cabernet_sauvignon = Pair(
 Wine('Cabernet sauvignon'),
@@ -449,6 +457,8 @@ does not need anything else
 )
 )
 
+# The wine_list is a list with the set variables that handles the data of each item within the classes.
+
 wine_list = [
     cabernet_sauvignon,
     pinot_noir,
@@ -463,8 +473,17 @@ wine_list = [
 ]
 
 
+# The welcome method is a method of the Greetings class that displays the app Logo, 
+# designed with ASCII, and prompts the user to press Enter to start the app.
+# it is the first method to be called.
+
 Greetings.welcome()
 
+# The init function displays an input question for the user asking for a wine name.
+# It forces the first letter to be capitalized with the capitalize function.
+# Once the user enters an input, it is saved in the input_message variable and checked in the list
+# of available wines within the Wine class, a Boolean value is returned and stored in the is_wine_valid variable 
+# the function sends it to the wine_validation function alongside the input_message variable.
 
 def init():
     clearing.clear()
@@ -473,6 +492,11 @@ def init():
     is_wine_valid = user_wine.is_valid_wine()
     wine_validation(is_wine_valid, input_message)
 
+# The build_menu function uses the py package simple_term_menu to create an interactive terminal menu 
+# and it holds two parameters, an options parameters that receives a variable from a chosen option, 
+# and the return_string parameter that is set as True by default.
+# if a string is returned the return_string parameter is set as True and a list of menu options coming from another function is shown, 
+# if it is false it returns one item from the menu.
 
 def build_menu(options, return_string = True):
     menu = TerminalMenu(options)
@@ -482,9 +506,12 @@ def build_menu(options, return_string = True):
     else:
         return menu_entry_index
 
-def reset_state():
-    input_message = None
-    is_wine_valid = None
+# The wine_validation function receives the is_wine_valid, input_message parameters and if the Boolean of the is_wine_valid equals to 
+# True it returns a message with the wine name alongside the pair_list_iteration showing three options of food that pair with that wine 
+# to be chosen.
+# if the Boolean of the is_wine_valid equals to False, it returns the input_message and an it is not a valid wine message, alongside the 
+# app_options function that prompts the user to choose between 2 options, to either try another wine or leave the app.
+
 
 def wine_validation(is_wine_valid, input_message):
     if is_wine_valid:
@@ -495,6 +522,11 @@ def wine_validation(is_wine_valid, input_message):
         print(f"{input_message} it is not a valid wine!")
         app_options()
 
+# The app_options function has a variable called options that holds two strings with questions, prompting the user to choose
+# betweeen leaving the app or chosing a different wine, an index variable calls the build_menu function and sends an options parameter
+# and a boolean False returning the two options as prompts to e selected, if he chooses the option to try another wine the init function 
+# is called again, if he chooses to leave the app the end method is called prompting a goodbye message.
+
 def app_options():
     options = ["I want to try another wine (Use Arrow Keys ↑ ↓)", "I want to exit the app (Use Arrow Keys ↑ ↓)"]
     index = build_menu(options, False)
@@ -502,6 +534,11 @@ def app_options():
         init()
     else:
         Greetings.end()
+
+# The cowsay_items function holds a parameter called cowsay_check that receives the chosen recipe name from the pair_list_iteration 
+# and it returns a cowsay item from the cowsay py package.
+# If the item chosen was Pork it returns the pig cowsay, if it was the Roast beef it returns the cow, 
+# if it was the Duck it returns the turkey, and if it was none it returns the T-rex.
 
 def cowsay_items(cowsay_check):
     if cowsay_check == 'Pork':
@@ -512,6 +549,22 @@ def cowsay_items(cowsay_check):
         cowsay.turkey('Shiraz goes with any Poultry!')
     else:
         cowsay.trex('No wine is old enough to Pair with a T-Rex!')
+
+
+# The pair_list_iteration function is the main logic of the app and it is where the input 
+# from the user is checked against the wine_list items and values from the wine_list are returned.
+# A for loop iterates in the wine_list, and if the input_message variable that carries the input from the user matches the 
+# wine name from the Wine class within the Pair class in the wine_list item and also if the item from the wine_list also matches 
+# the wine attribute within the Pair class it returns a list with 3 options, one option for main dish, one option for cheese, 
+# and one option for fruit, these options are stored in a list called menu_options, this list is then send to the build_menu function 
+# and displayed to the user to choose from, once the user chooses one of the three, the selection than goes to another set of conditionals
+# where it is checked against the pair class attributes and if the main dish name equals to the main dish selected it returns the 
+# recipe description the same happens for cheese and fruit.
+# this result is also checked against the cowsay_items function to return the cowsay message.
+# The goal of the app is to show food options that pair with the wine that the user chose, so this concludes the app's purpose.
+# after that the user can choose to remain in the app and try another wine or leave the app and receive a thank you, do 
+# not drink and drive message.
+
 
 def pair_list_iteration(input_message):
     for pair in wine_list:

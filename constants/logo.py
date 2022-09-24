@@ -7,3 +7,5 @@ logo = ("""
  ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚══════╝    ╚═════╝      ╚═╝      ╚═════╝  ╚═════╝ ╚═════╝ 
                     WELCOME TO THE WINE AND FOOD PAIRING APP!
 """)
+
+# Made with https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20

@@ -271,9 +271,29 @@ Click [here](https://peps.python.org/pep-0008/) To open the link to PEP 8 – St
 
 Click [here](https://trello.com/invite/b/r3h2nupf/f9aec563ed1bb1216b8cef26ded72817/agile-board) To open Trello board.
 
-### R8
-## **Help Documentation**
-R8 - GET BACK TO THIS
 
+# **Help Documentation**
 
+## **Installation guide:**
+### **Follow the steps bellow to run the app:**
+- Make sure you are on a WSL2 Ubuntu Environment, [Click Here](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview) To install it.
+- Clone the [Repository](https://github.com/Guscosta88/GusCosta_T1A3) and cd into it.
+- Run the 3 following commands in sequence in your wsl2 terminal.
+- ./my_wrapper.sh
+- source .venv/bin/activate
+- python3 main.py
 
+- The ./my_wrapper.sh command will install all the python packages needed to run this app as well as a .venv virtual environment. The source .venv/bin/activate will allow you to access the .venv virtual environment.The python3 main.py is the command to start the application.
+
+### **In case you get an error:**
+- If for any reason the ./my_wrapper.sh command doesn't work you can install the packages manually one by one with the following commands:
+1. sudo python3 -m pip install --upgrade pip
+2. sudo apt update && sudo apt install python3.10-venv
+3. sudo apt install python3-venv
+4. python3 -m venv .venv
+5. source .venv/bin/activate
+6. pip install simple-term-menu
+7. pip install clearing
+8. pip install cowsay
+9. pip install color-terminal
+10. pip install pytest

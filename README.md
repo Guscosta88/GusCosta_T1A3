@@ -4,7 +4,11 @@
 
 Click [here](https://github.com/Guscosta88/GusCosta_T1A3) To open Github Repo.
 
-Click [here](https://youtu.be/qFXFjf9qJko) To open my Youtube video showing the whole process.
+Click [here](https://youtu.be/KRXxx8xaYpE) Part 01 - Slide Deck presentation.
+
+Click [here](https://youtu.be/Cj6-mNZGvfw) Part 02 - Slide Deck presentation - App Running.
+
+Click [here](https://youtu.be/dUEsWa-8rNI) Part 03 - Slide Deck presentation - Code Explained.
 
 ------
 

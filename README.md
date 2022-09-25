@@ -16,7 +16,7 @@ Click [here](https://youtu.be/qFXFjf9qJko) To open my Youtube video showing the 
 
 #### **What problem does it solve?**
 
-- It allows the user to aquire knowledge about the different types of wine and the foods that goes with it.
+- It allows the user to acquire knowledge about the different types of wine and the foods that goes with it.
 
 #### **what is the main goal?**
 
@@ -65,21 +65,6 @@ Click [here](https://peps.python.org/pep-0008/) To open the link to PEP 8 – St
   if a string is returned the return_string parameter is set as True and a list of menu options coming from another function is shown, 
   if it is false it returns one item from the menu.
 
-#### **wine_validation function(Error handling, it handles an input different then the available in the list of wines):**
-
-- The wine_validation function receives the is_wine_valid, input_message parameters and if the Boolean of the is_wine_valid equals to 
-  True it returns a message with the wine name alongside the pair_list_iteration showing three options of food that pair with that wine 
-  to be chosen.
-  if the Boolean of the is_wine_valid equals to False, it returns the input_message and an it is not a valid wine message, alongside the 
-  app_options function that prompts the user to choose between 2 options, to either try another wine or leave the app.
-
-#### **app_options function(Error Handling, it gives the user options if the input was invalid):**
-
-- The app_options function has a variable called options that holds two strings with questions, prompting the user to choose
-  betweeen leaving the app or chosing a different wine, an index variable calls the build_menu function and sends an options parameter
-  and a boolean False returning the two options as prompts to be selected, if he chooses the option to try another wine the init function 
-  is called again, if he chooses to leave the app, the end method is called prompting a goodbye message.
-
 #### **pair_list_iteration function:**
 
 - The pair_list_iteration function is the main logic behind the app and it is where the input 
@@ -105,38 +90,123 @@ Click [here](https://peps.python.org/pep-0008/) To open the link to PEP 8 – St
 
 ------
 
+# **Error Handling Functions:**
+
+#### **wine_qty_error_handling**
+- The wine_qty_error_handling function receives a qty_message parameter with the user input that answers the question "how many wines do you want to check?", it also uses a while loop and try/except statements, if the answer it is not an integer it keeps asking untill the user inputs an integer.
+
+#### **wine_validation function(Error handling, it handles an input different then the available in the list of wines):**
+
+- The wine_validation function receives the is_wine_valid, input_message parameters and if the Boolean of the is_wine_valid equals to 
+  True it returns a message with the wine name alongside the pair_list_iteration showing three options of food that pair with that wine 
+  to be chosen.
+  if the Boolean of the is_wine_valid equals to False, it returns the input_message and an it is not a valid wine message, alongside the 
+  app_options function that prompts the user to choose between 2 options, to either try another wine or leave the app.
+
+#### **app_options function(Error Handling, it gives the user options if the input was invalid):**
+
+- The app_options function has a variable called options that holds two strings with questions, prompting the user to choose
+  betweeen leaving the app or chosing a different wine, an index variable calls the build_menu function and sends an options parameter
+  and a boolean False returning the two options as prompts to be selected, if he chooses the option to try another wine the init function 
+  is called again, if he chooses to leave the app, the end method is called prompting a goodbye message.
+
+------
+
+# **Testing - Automated unit testing with pytest**
+
+#### **test_initial_pair_value**
+- The test_initial_pair_value test function makes sure that the pair list 
+  items are run properly within the class through the correct attributes 
+  to return the correct pair values.
+  pytest package was installed, the Pair class was imported.
+  This test was run with the command: 
+  pytest classes/test_pair.py
+  
+![test_initial_pair_value](./images/test_initial_pair_value.jpg)
+
+#### **test_no_pair_value**
+- The test_no_pair_value test function raises an exception which means that 
+  the next block of code will be tested and if no exception is raised between 
+  pair and Pair() the test passes, otherwise it fails.
+  pytest package was installed, the Pair class was imported.
+  This test was run with the command: 
+  pytest classes/test_pair.py 
+
+![test_no_pair_value](./images/test_no_pair_value.jpg)
+
+#### **test_pair**
+- The test_pair program functions run together.
+  pytest package was installed, the Pair class was imported.
+  This test was run with the command: 
+  pytest classes/test_pair.py
+
+![test_pair](./images/test_pair.jpg)
+
+#### **test_initial_recipe_value**
+- The test_initial_recipe_value test function makes sure that the recipe list 
+  items are run properly within the class through the correct attributes to 
+  return the correct recipe values.
+  pytest package was installed, the Recipe class was imported.
+  This test was run with the command: 
+  pytest classes/test_recipe.py 
+
+![test_initial_recipe_value](./images/test_initial_recipe_value.jpg)
+
+#### **test_no_recipe_value**
+- The test_no_recipe_value test function raises an exception which means that the next block of code will be tested and if no exception
+  is raised between recipe and Recipe() the test passes, otherwise it fails.
+  pytest package was installed, the Recipe class was imported.
+  This test was run with the command: 
+  pytest classes/test_recipe.py 
+
+![test_no_recipe_value](./images/test_no_recipe_value.jpg)
+
+#### **test_recipe**
+- The test_recipe program functions run together.
+  pytest package was installed, the Recipe class was imported.
+  This test was run with the command: 
+  pytest classes/test_recipe.py
+
+![test_recipe](./images/test_recipe.jpg)
+
+------
+
 # **A General break down of the app's functionalities:**
 
 ### **1. Welcome method welcomes the user and prompts the user to press enter to start.**
 
 ![Welcome](./images/welcome.jpg)
 
-### **2. init function asks for a user input with the name of the wine:**
+### **2. wine_qty_error_handling function asks for a number input with the quantity of wines to be searched:**
+
+![wine_qty_error_handling](./images/wine_qty_error_handling.jpg)
+
+### **3. init function asks for a user input with the name of the wine:**
 
 ![What_type_of_wine](./images/what_type_of_wine.jpg)
 
-### **3. The class method is_valid_wine checks to see if the user input is available in the list of __available__wines, returning a True or False Boolean.**
-### **4. If the is_valid_wine is True the app returns a list with options of foods that pair with that wine.**
+### **4. The class method is_valid_wine checks to see if the user input is available in the list of __available__wines, returning a True or False Boolean.**
+### **5. If the is_valid_wine is True the app returns a list with options of foods that pair with that wine.**
 
 ![Foods](./images/foods.jpg)
 
 
-### **5. If the is_valid_wine is False the app returns app_options function with a list with 2 options asking if the user wants to try a different wine or exit the app.**
+### **6. If the is_valid_wine is False the app returns app_options function with a list with 2 options asking if the user wants to try a different wine or exit the app.**
 
 ![Not_valid](./images/not_valid.jpg)
 
-### **6. Once the user picks a food option from the list, the app then checks if the item name matches the selected item and it returns a recipe for that item.**
-### **7. Then the function app_options presents a list with 2 options asking if the user wants to try a different wine or exit the app.**
+### **7. Once the user picks a food option from the list, the app then checks if the item name matches the selected item and it returns a recipe for that item.**
+### **8. Then the function app_options presents a list with 2 options asking if the user wants to try a different wine or exit the app.**
 
 ![recipe_cowsay](./images/recipe_cowsay.jpg)
 
 
-### **8. When the user chooses to try another wine the init function runs again.**
-### **9. When the user chooses to exit the app an ASCII file with a bottle of wine and glasses is shown on the Screen with a thank you and a do not drink and drive message.**
+### **9. When the user chooses to try another wine the init function runs again.**
+### **10. When the user chooses to exit the app an ASCII file with a bottle of wine and glasses is shown on the Screen with a thank you and a do not drink and drive message.**
 
 ![End](./images/end.jpg)
 
-### **10. The Python packages used in this application are:**
+### **11. The Python packages used in this application are:**
 
 - Simple_term_menu:
     It creates an interactive menu in the terminal with the option to use arrow keys as selectors.
@@ -149,6 +219,9 @@ Click [here](https://peps.python.org/pep-0008/) To open the link to PEP 8 – St
 
 - Colorterminal
     it adds collor to the terminal items.
+
+- Pytest
+    Used for testing.
 
 # **Flow Chart**
 

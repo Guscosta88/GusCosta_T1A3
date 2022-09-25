@@ -479,6 +479,21 @@ wine_list = [
 
 Greetings.welcome()
 
+# The wine_qty_error_handling function receives a qty_message parameter with the result of the answer to the 
+# question "how many wines do you want to check?", and if the answer it is not an integer it keeps 
+# asking untill the user inputs an integer.
+
+def wine_qty_error_handling(qty_message):
+    clearing.clear()
+    input_number = None
+    while True:
+        try:
+            input_number = int(input(qty_message))
+            break
+        except:
+            clearing.clear()
+            print('must be an integer')
+            
 # The init function displays an input question for the user asking for a wine name.
 # It forces the first letter to be capitalized with the capitalize function.
 # Once the user enters an input, it is saved in the input_message variable and checked in the list
@@ -492,6 +507,7 @@ def init():
     is_wine_valid = user_wine.is_valid_wine()
     wine_validation(is_wine_valid, input_message)
 
+    
 # The build_menu function uses the py package simple_term_menu to create an interactive terminal menu 
 # and it holds two parameters, an options parameters that receives a variable from a chosen option, 
 # and the return_string parameter that is set as True by default.
@@ -519,8 +535,10 @@ def wine_validation(is_wine_valid, input_message):
         print(f"{input_message} goes well with the foods bellow, choose one for Recipe! (Use Arrow Keys ↑ ↓)")
         pair_list_iteration(input_message)
     else:
+        clearing.clear()
         print(f"{input_message} it is not a valid wine!")
         app_options()
+
 
 # The app_options function has a variable called options that holds two strings with questions, prompting the user to choose
 # betweeen leaving the app or chosing a different wine, an index variable calls the build_menu function and sends an options parameter
@@ -591,7 +609,7 @@ def pair_list_iteration(input_message):
 
             app_options()
 
-
+wine_qty_error_handling("How many wines do you want to check? ")
 init()
 
 

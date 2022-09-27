@@ -282,6 +282,8 @@ Click [here](https://trello.com/invite/b/r3h2nupf/f9aec563ed1bb1216b8cef26ded728
 
 ## **Installation guide:**
 ### **Follow the steps bellow to run the app:**
+- Click [here](https://www.pythonanywhere.com/shared_console/428b4346-f536-42ef-b44f-295213d890d1) To open App on Python anywhere host.
+- Alternatively if you want to run the app in your terminal follow the steps bellow.
 - Make sure you are on a WSL2 Ubuntu Environment, [Click Here](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview) To install it.
 - Clone the [Repository](https://github.com/Guscosta88/GusCosta_T1A3) and cd into it.
 - Run the 3 following commands in sequence in your wsl2 terminal.
